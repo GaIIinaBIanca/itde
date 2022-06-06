@@ -7,14 +7,14 @@
 		const day = 24.0*60*60; //тривалість земного дня у секундах
 		AFRAME.registerComponent('planet', {
 			schema: {name: {type: 'string', default: ""}, //ім'я планети 
-		   	//середня відстань планети від Сонця
- 		   	dist: {type: 'number', default: 0},
- 		   	mass: {type: 'number', default: 0}, //маса планети, кг
- 		   	T: {type: 'int', default: 0}, //планетарний рік, земних днів
- 		   	v: {type: 'array', default: [0,0,0]}, //вектор швидкості
- 		   	a: {type: 'array', default: [0,0,0]}, //вектор прискорення
- 		   	//координатний радіус-вектор
- 		   	pos: {type: 'array', default: [0,0,0]}
+		   		//середня відстань планети від Сонця
+ 		   		dist: {type: 'number', default: 0},
+ 		   		mass: {type: 'number', default: 0}, //маса планети, кг
+ 		   		T: {type: 'int', default: 0}, //планетарний рік, земних днів
+ 		   		v: {type: 'array', default: [0,0,0]}, //вектор швидкості
+ 		   		a: {type: 'array', default: [0,0,0]}, //вектор прискорення
+ 		   		//координатний радіус-вектор
+ 		   		pos: {type: 'array', default: [0,0,0]}
  			}
 		init: function () {
  			this.data.T = this.data.T * day; //переводимо із земних днів у секунди
@@ -61,7 +61,7 @@ AFRAME.registerComponent('main', {
 	</script>
 	<a-scene>
  		<a-sky color="black"></a-sky>
- 		<a-camera position="0 0 300" cursor-visible="true" cursorscale="2" cursor-color="#0095DD" cursor-opacity="0.5"></a-camera>
+ 		<a-camera position="0 0 400" cursor-visible="true" cursorscale="2" cursor-color="#0095DD" cursor-opacity="0.5"></a-camera>
  		<a-entity geometry="primitive: sphere; radius: 20.510" material="color: yellow" planet="dist: 0; mass: 1.989e30; name: Sun"></a-entity>
  		<a-entity geometry="primitive: sphere; radius: 2.4397" material="color: #AA5588" planet="dist: 57.910e9; mass: 3.285e23; T: 88; name: Mercury"></a-entity>
  		<a-entity geometry="primitive: sphere; radius: 6.0518" material="color: white" planet="dist: 108.2e9; mass: 4.876e24; T: 224.7; name: Venus"></a-entity>
